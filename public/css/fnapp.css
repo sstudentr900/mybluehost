@@ -1,0 +1,1464 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&family=Noto+Serif+TC:wght@300;500;700;900&display=swap');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    /* font-family: Helvetica, Arila, "LiHei Pro", "Microsoft JhengHei", "新細明體", serif; */
+    font-family: 'Noto Sans TC',sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#444;
+    font-size: 16px;
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+img {
+    border: 0;
+    /* width: 100%;
+    height: auto; */
+    display: block;
+    /*li 間隙*/
+}
+
+a {
+    /* font-size: 16px; */
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+/* h2 {
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}*/
+
+small {
+    font-size: 12px;
+}
+
+textarea:focus,
+input:focus{
+    outline: none;
+}
+
+.publicFlex{
+    display: flex;
+}
+
+/*publicform--------------------------------------------------------------------*/
+.publicform{
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255,255,255,.82);
+    box-shadow: -2px 1px 10px #00000010;
+    padding: 60px 60px 80px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+}
+.publicform .title{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.publicform .title h3{
+    font-size: 36px;
+    font-weight: bold;
+}
+.publicform .title p{
+    margin-top: 5px;
+    font-family: 'Noto Sans TC',sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.publicform .title i{
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+.publicform .title i svg{
+    fill: #467ca8;
+    width: 30px;
+    height: auto;
+}
+.publicform  button{
+    width: 100%;
+    background: #467ca8;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+.publicform li{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+.publicform  textarea:focus,
+.publicform  select:focus,
+.publicform  input:focus{
+    outline: none;
+}
+.publicform  textarea,
+.publicform  select,
+.publicform  input[type='email'],
+.publicform  input[type='password'],
+.publicform  input[type='text']{
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+}
+.publicform  select{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23454056' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+}
+.publicform textarea{
+    min-height: 120px;
+}
+/* .publicform input[type='radio'],
+.publicform input[type='checkbox']{
+    width: auto;
+    padding: 0;
+} */
+.publicform label{
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Noto Sans TC',sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    /* margin-bottom: 1px; */
+}
+/*puplicError*/
+.puplicError{
+    font-size: 12px;
+    font-family: 'Noto Sans TC',sans-serif;
+    /* letter-spacing: 1px; */
+    font-weight: 100;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: red;
+    color: #fff;
+    position: absolute;
+    left: 4px;
+    bottom: -16px;
+}
+/*puplicPasswordEye*/
+.puplicPasswordEye{
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    cursor: pointer;
+}
+.puplicPasswordEye svg{
+    fill: #777;
+}
+.puplicPasswordEye.active svg:nth-child(1),
+.puplicPasswordEye svg:nth-child(2){
+    display: none;
+}
+.puplicPasswordEye.active svg:nth-child(2){
+    display: block;
+}
+/*publicRadio*/
+.publicRadio{
+    display: flex;
+}
+.publicRadio .radio{
+    display: flex;
+    align-items: center;
+}
+.publicRadio .radio+.radio{
+    margin-left: 10px;
+}
+/*publicImg*/
+.publicImg{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ced4da;
+    position: relative;
+    display: inline-block;
+    flex: 0 0 120px;
+}
+.publicImg label{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.publicImg label span{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.publicImg input{
+    display: none;
+}
+.publicImg .img{
+    width: 100%;
+    padding: 5px;
+    max-width: 680px;
+    position: absolute;
+    top: 0;
+}
+.publicImg .img img{
+    width: 100%;
+    height: auto;
+}
+.publicImg i{
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.publicImg i svg{
+    fill: #777;
+}
+
+
+
+/*publicLoad-----------------------------------------------------------------------*/
+.publicLoad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease-out;
+}
+.publicLoad.active {
+    opacity: 1;
+    visibility: visible;
+}
+.publicLoad .load{
+    height: 60px;
+    width: 60px;
+    position: relative;
+}
+.publicLoad .load div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.publicLoad .load div:nth-child(2){
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+.publicLoad .load div:nth-child(3){
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+.publicLoad .load div:nth-child(4){
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.publicLoad .load div:nth-child(5){
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+.publicLoad .load div:nth-child(6){
+    -webkit-transform: rotate(150deg);
+    -ms-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+.publicLoad .load div:nth-child(7){
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.publicLoad .load div:nth-child(8){
+    -webkit-transform: rotate(210deg);
+    -ms-transform: rotate(210deg);
+    transform: rotate(210deg);
+}
+.publicLoad .load div:nth-child(9){
+    -webkit-transform: rotate(240deg);
+    -ms-transform: rotate(240deg);
+    transform: rotate(240deg);
+}
+.publicLoad .load div:nth-child(10){
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.publicLoad .load div:nth-child(11){
+    -webkit-transform: rotate(300deg);
+    -ms-transform: rotate(300deg);
+    transform: rotate(300deg);
+}
+.publicLoad .load div:nth-child(12){
+    -webkit-transform: rotate(330deg);
+    -ms-transform: rotate(330deg);
+    transform: rotate(330deg);
+}
+.publicLoad .load div:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    height: 15%;
+    background-color: #467ca7;
+    border-radius: 100%;
+    -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+    animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+}
+.publicLoad .load div:nth-child(2):before {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+.publicLoad .load div:nth-child(3):before {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+.publicLoad .load div:nth-child(4):before {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+.publicLoad .load div:nth-child(5):before {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+.publicLoad .load div:nth-child(6):before {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+.publicLoad .load div:nth-child(7):before {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+.publicLoad .load div:nth-child(8):before {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+.publicLoad .load div:nth-child(9):before {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+.publicLoad .load div:nth-child(10):before {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+.publicLoad .load div:nth-child(11):before {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+.publicLoad .load div:nth-child(12):before {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+@-webkit-keyframes sk-circleFadeDelay {
+    0%, 39%, 100% { opacity: 0; }
+    40% { opacity: 1; }
+}
+@keyframes sk-circleFadeDelay {
+    0%, 39%, 100% { opacity: 0; }
+    40% { opacity: 1; } 
+}
+
+
+/*publicPage--------------------------------------------------------------------*/
+.publicPage {
+    font-family: 'Noto Sans TC',sans-serif;
+    text-align: center;
+    padding: 0 15px 20px;
+    font-weight: 300;
+}
+.publicPage li {
+    padding: 0;
+    margin: 0 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+    transition: .5s;
+}
+.publicPage li a {
+    padding: 0px 11px;
+    min-width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #666;
+    transition: .5s;
+}
+.publicPage li.active,
+.publicPage li:hover{
+    background: #427eaa;
+}
+.publicPage li.active a,
+.publicPage li:hover a{
+    color: #fff;
+}
+.publicPage ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.publicPage p{
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+.publicPage li a.previous,
+.publicPage li a.next {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    border-radius: 60px;
+    min-width: 40px;
+    height: 40px;
+}
+.publicPage li a.previous::after,
+.publicPage li a.next::after {
+    position: absolute;
+    content: '';
+    border: 2px solid #888;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-top: none;
+    border-right: none;
+    left: 18px;
+}
+.publicPage li a.next::after {
+    transform: rotate(-135deg);
+    left: 15px;
+}
+.publicPage li a.previous:hover,
+.publicPage li a.next:hover {
+    background: #f27700;
+}
+.publicPage li a.previous:hover:after,
+.publicPage li a.next:hover:after {
+    border-color: #fff;
+}
+@media (max-width: 1024px) {
+    .publicPage p,
+    .publicPage li.first,
+    .publicPage li.pre,
+    .publicPage li.next,
+    .publicPage li.last{
+        display: none;
+    }
+}
+
+
+/*publicSection--------------------------------------------------------------------*/
+.publicMenu{
+    width: 250px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.publicMenu .menu{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.publicMenu .menu b,
+.publicMenu .menu a{
+    font-size: 16px; 
+    color: #777777;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* border-bottom: 1px dashed #666; */
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.publicMenu .menu>ul>li{
+    border-bottom: 1px dashed #666;
+}
+
+.publicMenu .menu>ul>li.active>a,
+.publicMenu .menu>ul>li.active>b,
+.publicMenu .menu a.active,
+.publicMenu .menu>ul>li>b:hover,
+.publicMenu .menu>ul>li>a:hover{
+    color: #fff;
+    background-color: #437eaa;
+}
+/* .publicMenu .menu b:hover svg,
+.publicMenu .menu a:hover svg,
+.publicMenu .menu li.active a svg,
+.publicMenu .menu li.active b svg{
+    fill: #fff;
+} */
+
+.publicMenu .menu ul li ul{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+    padding:  0 0 0 25px;
+}
+.publicMenu .menu ul li.active ul{
+    max-height: 220px;
+    transition: max-height .6s;
+}
+.publicMenu .menu ul li ul li a{
+    /* padding: 10px 5px; */
+    padding: 2px 0;
+    font-size: 15px; 
+    /* background: #333333; */
+    background: #fff;
+    color: #838383;
+    border-bottom: none;
+}
+.publicMenu .menu ul li ul li:last-child{
+    margin-bottom: 8px;
+}
+.publicMenu .menu ul li ul li:first-child{
+    margin-top: 8px;
+}
+.publicMenu .menu ul li.active ul li.active a,
+.publicMenu .menu ul li.active ul li a:hover{
+    /* background: #777; */
+    /* color: #d9d9d9; */
+    color: #437eaa;
+}
+
+.publicMain{
+    padding: 30px 24px 20px calc(24px + 250px) ;
+    min-height: 100vh;
+    background: url('../img/fnbg.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* width: 100vw; */
+}
+
+
+body {
+    font-family: 'Noto Serif TC', serif;
+    color: #777;
+}
+
+/*public--------------------------------------------------------------------*/
+.publicMenu .contact{
+    margin-bottom: 20px;
+}
+.publicMenu .contact h3{
+    font-size: 22px;
+    line-height: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-weight: 300;
+}
+.publicMenu .contact p{
+    padding: 15px 0 0;
+}
+.publicMenu .contact a,
+.publicMenu .contact p{
+    font-size: 12px;
+    color: #777777;
+    line-height: 21px;
+    display: inline-block;
+}
+.publicMain .nav{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: end;
+    align-items: center;
+}
+.publicMain .navButton{
+    display: none;
+}
+.publicMain .logo img{
+    width: 400px;
+}
+@media (max-width: 1024px) {
+    .publicMenu{
+        width: 100%;
+        background: #fff;
+        z-index: 98;
+        border-right: none;
+        height: 0;
+        overflow: hidden;
+        transition: height .5s;
+        top: 55px;
+    }
+    .publicSection.active .publicMenu{
+        height: calc(100vh - 55px);
+        overflow: auto;
+    }
+    /* .publicSection.active .publicMenu .menu {
+        margin-bottom: 60px;
+    } */
+    .publicMain{
+        padding: 70px 15px 20px 15px;
+    }
+    .publicMain .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 20px;
+        justify-content: center;
+        z-index: 99;
+        background: #fff;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .publicMain .nav .logo{
+        margin-left: 20px;
+    }
+    .publicMain .nav .logo img{
+        width: 200px;
+    }
+    .publicMain .nav .navButton{
+        /* display: flex; */
+        display: block;
+        position: absolute;
+        left: 13px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        height: 38px;
+        width: 45px;
+    }
+    .publicMain .nav .navButton span{
+        display: inline-block;
+        height: 3px;
+        width: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -12px;
+        background: #999;
+        transform-origin: center center;
+        transition: margin .2s .3s, transform .2s .1s;
+    }
+    .publicMain .nav .navButton span:nth-child(1){
+        margin-top: -8px;
+        transform: rotate(0);
+    }
+    .publicMain .nav .navButton span:nth-child(2){
+        margin-top: -1px;
+        transform: scaleX(1);
+    }
+    .publicMain .nav .navButton span:nth-child(3){
+        margin-top: 6px;
+        transform: rotate(0);
+    }
+    .publicSection.active .publicMain .nav .navButton span:nth-child(1) {
+        margin-top: -1px;
+        transform: rotate(-45deg);
+    }
+    .publicSection.active .publicMain .nav .navButton span:nth-child(2) {
+        margin-top: -1px;
+        transform: scaleX(0);
+    }
+    .publicSection.active .publicMain .nav .navButton span:nth-child(3) {
+        margin-top: -1px;
+        transform: rotate(45deg);
+    }
+    .publicMain .mainContent{
+        margin-top: 55px;
+        padding-top: 15px;
+    }
+}
+@media (max-width: 620px) {
+    .publicMain .nav{
+        justify-content: end;
+    }
+}
+/*publicform------------------------------------------------------*/
+.publicform .title2{
+    margin-bottom: 30px;
+}
+.publicform .title2 h4{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+.publicform .title2 svg{
+    width: 28px;
+    height: auto;
+    fill: #467ca8;
+    margin-right: 10px;
+}
+.publicform .account{
+    font-size: 15px;
+    font-family: 'Noto Sans TC',sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    position: absolute;
+    width: 100%;
+    background: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+}
+.publicform .account a{
+    color: #467ca8;
+    margin-left: 5px;
+    text-decoration: revert;
+}
+.publicform label{
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+}
+.publicform label .red{
+    color: red;
+}
+.publicform .publicImg{
+    display: block;
+    width: 140px;
+    height: 140px;
+}
+.publicform .publicImg label{
+    margin-bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.publicform .nameAndgenderDiv{
+    margin-left: 30px;
+    width: calc(100% - 170px);
+}
+.publicform .nameAndgenderDiv>div+div,
+.publicform button{
+    margin-top: 10px;
+}
+.publicform .passwordDiv,
+.publicform .accountDiv,
+.publicform .nameDiv{
+    position: relative;
+}
+
+/* .publicform .publicFlex{
+    align-items: end;
+} */
+/* .publicform .gender{
+    margin-left: 20px;
+    margin-bottom: 18px;
+}
+.publicform .gender input+label+input{
+    margin-left: 10px;
+} */
+/* .publicform .publicImg,
+.publicform .publicImg label{
+    width: 190px;
+    height: 190px;
+} */
+/* .publicform .buttons{
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.publicform .buttons a{
+    width: 100%;
+    background: #467ca8;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Noto Sans TC', serif;
+    font-weight: 100;
+    height: 54px;
+} */
+@media (max-width: 720px) {
+    .publicform{
+        padding: 20px 20px 80px;
+    }
+}
+@media (max-width: 640px) {
+    .publicform .title{
+        margin-bottom: 20px;
+    }
+    /* .publicform .publicFlex{
+        flex-wrap: wrap;
+    }
+ 
+    .publicform .right .publicFlex{
+        flex-wrap: wrap-reverse;
+    } */
+    /* .publicform .accountDiv,
+    .publicform .nameDiv,
+    .publicform .right{
+        margin-left: 0;
+        width: 100%;
+    } */
+    /* .publicform .publicImg{
+        margin-bottom: 20px;
+    }
+    .publicform .gender{
+        margin-left: 0;
+        margin-bottom: 20px;
+    } */
+}
+
+/*fnregister*/
+.fnregister .publicform {
+    padding: 40px 40px 80px;
+}
+.fnregister .publicform li {
+    margin-bottom: 16px;
+}
+
+.fnregister .puplicPasswordEye{
+    top: 35px;
+}
+.fnregister .publicform .passwordDiv,
+.fnregister .publicform .genderDiv{
+    width: 48%;
+}
+
+
+
+/*publicTitle*/
+.publicTitle{
+    background-color: #427eaa;
+    color: #fff;
+}
+.publicTitle h2{
+    padding: 16px;
+    text-shadow: 2px 0px 6px #000000;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+}
+/*publicGotop*/
+.publicGotop{
+    margin-top: 10px;
+    text-align: right;
+}
+.publicGotop a{
+    font-family: 'Noto Sans TC',sans-serif;
+    display: inline-block;
+    text-decoration: revert;
+}
+.publicMenu .menu b,
+.publicMenu .menu a{
+    padding: 12px 8px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.publicMenu .menu b svg,
+.publicMenu .menu a svg{
+    width: 16px;
+    height: auto;
+    fill: #aaa;
+}
+/* .publicMenu .menu b p,
+.publicMenu .menu a p{
+    margin: 0 10px;
+} */
+.publicMenu .menu b{
+    position: relative;
+}
+.publicMenu .menu b::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 2px solid #aaa;
+    position: absolute;
+    right: 10px;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    margin-bottom: 4px;
+    transition: transform .3s;
+}
+.publicMenu .menu li.active b::after{
+    transform: rotate(135deg);
+    border: 2px solid #fff;
+    border-left: none;
+    border-bottom: none;
+}
+.publicMenu .menu b:hover::after{
+    border: 2px solid #fff;
+    border-left: none;
+    border-bottom: none;
+}
+
+
+/*fnhome--------------------------------------------------------------------*/
+.fnhome .slide .content{
+    position: relative;
+}
+.fnhome .slide .content:hover div{
+    display: block;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+.fnhome .slide .content:hover div.pre{
+    left: 20px;
+    border-top: none;
+    border-right: none;
+}
+.fnhome .slide .content:hover div.next{
+    right: 20px;
+    border-bottom: none;
+    border-left: none;
+
+}
+.fnhome .slide .content li{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fnhome .slide .content li.active{
+    position: relative;
+    z-index: 1;
+}
+.fnhome .slide .content li p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 15px;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    opacity: 0;
+    transition: 1.2s;
+}
+.fnhome .slide .content li.active p{
+    opacity: 1;
+}
+.fnhome .slide .content li img{
+    width: 100%;
+    height: auto;
+}
+.fnhome .slide .dot{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.fnhome .slide .dot li{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #b7b7b7;
+    position: relative;
+    cursor: pointer;
+}
+.fnhome .slide .dot li+li{
+    margin-left: 10px;
+}
+.fnhome .slide .dot li.active::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #434648;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.fnhome .publicFlex{
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.fnhome .publicFlex>div{
+    /* width: calc((100% - 320px - 200px) / 2); */
+    overflow: hidden;
+    padding: 0 15px;
+}
+.fnhome .publicFlex .title{
+    background: #417dab;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.fnhome .publicFlex .title h3{
+    font-size: 24px;
+    color: #fff;
+    /* font-family: 'Noto Serif TC', serif; */
+    font-weight: 700;
+}
+.fnhome .publicFlex>div li{
+    background-color: #fff;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    transition: all .5s;
+    position: relative;
+    min-height: 78px;
+}
+.fnhome .publicFlex>div li:nth-child(even){
+    background-color: #ececec;
+}
+/* .fnhome .publicFlex>div li:hover:nth-child(even){
+    background-color: #fff;
+} */
+.fnhome .publicFlex>div li a{
+    font-size: 18px;
+    /* font-family: 'Noto Serif TC', serif; */
+    font-weight: 700;
+    width: calc(100% - 85px);
+    color: #777;
+}
+.fnhome .publicFlex>div li:hover a{
+    color: #316494;
+}
+.fnhome .publicFlex>div li p{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    /* text-align: right; */
+    /* margin-top: 3px; */
+}
+.fnhome .publicFlex>div li span{
+    background: #666;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px;
+    display: inline-block;
+}
+.fnhome .publicFlex .new,
+.fnhome .publicFlex .bulletin{
+    flex: 1 1;
+}
+.fnhome .publicFlex .fbbulletin{
+    flex: 0 0 370px;
+    text-align: center;
+}
+.fnhome .advertise{
+    padding: 20px 0 0;
+}
+.fnhome .advertise ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.fnhome .advertise ul li{
+    width: 17%;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: all .5s;
+    border: 1px solid #666;
+}
+.fnhome .advertise ul li:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0px 1px 5px #00000030;
+}
+.fnhome .advertise ul li img{
+    width: 100%;
+    height: auto;
+}
+.fnhome .publicFlex .control{
+    display: flex;
+    margin-top: 5px;
+}
+.fnhome .publicFlex .control button{
+    cursor:pointer;
+    display: none;
+}
+.fnhome .publicFlex .control button.active{
+    display: block;
+}
+.fnhome .publicFlex .control button+button{
+    margin-left: 5px;
+}
+
+@media (max-width: 1400px) {
+    .fnhome .publicFlex .fbbulletin,
+    .fnhome .publicFlex .new,
+    .fnhome .publicFlex .bulletin{
+        flex: 1 1 100%;
+    }
+    .fnhome .publicFlex .new,
+    .fnhome .publicFlex .bulletin{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1024px) {
+    .fnhome .advertise ul li{
+        width: 32%;
+    }
+    .fnhome .advertise {
+        padding: 10px 0 0 ;
+    }
+}
+@media (max-width: 640px) {
+    .fnhome .advertise ul li{
+        width: 48%;
+    }
+}
+/*publicCustomTable----------------------------------------------*/
+.publicCustomTable{
+    background: rgba(255,255,255,.82);
+    box-shadow: -2px 1px 10px #00000010;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px 20px 40px;
+    margin-top: 8px;
+    position: relative;
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+    /* font-family: 'Noto Serif TC', serif;
+    font-weight: 200; */
+}
+.publicCustomTable::after{
+    content: '';
+    background: url('../img/fnbg.png') no-repeat;
+    bottom: 0;
+    right: 0;
+    width: 869px;
+    height: 516px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.15;
+}
+.publicCustomTable p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #777777;
+}
+.publicCustomTable p a{
+    display: inline-block ;
+}
+.publicCustomTable p+p{
+    margin-top: 16px;
+}
+.publicCustomTable {
+    margin: 15px 0 10px;
+    font-weight: bold;
+}
+.publicCustomTable strong a,
+.publicCustomTable strong{
+    font-size: 20px;
+    display: flex;
+}
+.publicCustomTable hr{
+    border-color: #ededed;
+    border-style: solid;
+    border-width: 1px 0 0;
+    height: 1px;
+    margin: 10px 0 15px;
+}
+.publicCustomTable table {
+    width: 100%;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    border-collapse:collapse;
+    font-size: 16px;
+    line-height: 32px;
+    margin: 20px 0;
+    /* font-family: 'Noto Serif TC', serif;
+    font-weight: 200; */
+}
+.publicCustomTable tr:first-child {
+    background-color: #DDDDDD;
+}
+.publicCustomTable td {
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    text-align: center;
+    font-weight: 400;
+}
+.publicCustomTable .appendix{
+    margin-top: 20px;
+}
+.publicCustomTable .appendix a{
+    font-size: 14px;
+    font-weight: 100;
+    color: #427eaa;
+}
+/*fnintroduction-----------------------------------------------*/
+.fnacademic .publicCustomTable,
+.fnjournal .publicCustomTable,
+.fnlist .publicCustomTable,
+.fnjoin .publicCustomTable,
+.fnintroduction .publicCustomTable{
+    min-height: 75vh;
+}
+/*fnmeeting-----------------------------------------------*/
+div[class^="fn fnmeeting"] .publicFlex{
+    justify-content: space-between;
+}
+div[class^="fn fnmeeting"] .publicFlex>div{
+    width: calc(50% - 12px);
+}
+div[class^="fn fnmeeting"] .publicCustomTable::after{
+    display: none;
+}
+div[class^="fn fnmeeting"] .right .items .publicTitle a{
+    font-size: 18px;
+    padding: 8px;
+}
+div[class^="fn fnmeeting"] .right .items li{
+    margin-bottom: 20px;
+}
+div[class^="fn fnmeeting"] .right .items li p{
+    padding: 10px;
+    font-family: 'Noto Sans TC',sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 22px;
+    background: rgba(255,255,255,.82);
+}
+div[class^="fn fnmeeting"] .moduleItemTitle{
+    margin-bottom: 10px;
+}
+@media (max-width: 1024px) {
+    div[class^="fn fnmeeting"] .publicFlex{
+        flex-wrap: wrap;
+    }
+    div[class^="fn fnmeeting"] .publicFlex>div{
+        width: 100%;
+    }
+}
+
+/*fnmember------------------------------------------------------*/
+.fnmember_payment .publicCustomContent,
+.fnpassword_change .publicCustomContent,
+.fnpassword .publicCustomContent,
+.fnmember_password .publicCustomContent,
+.fnregister .publicCustomContent,
+.fnmember_information .publicCustomContent,
+.fnmember .publicCustomContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 68px - 70px);
+}
+.fnmember .forget a{
+    font-size: 15px;
+    font-family: 'Noto Sans TC',sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.fnmember .forget a:hover{
+    text-decoration: revert;
+    color: #467ca8;
+}
+/*fnmember_information*/
+.fnmember_information .publicform {
+    padding: 40px 40px 80px;
+    max-width: 680px;
+}
+.fnmember_information .publicform li {
+    margin-bottom: 16px;
+}
+.fnmember_information .genderDiv{
+    width: 100%;
+}
+
+/*fnregister*/
+.fnregister .publicform{
+    max-width: 690px;
+}
+.fnregister .publicform .publicFlex{
+    width: 100%;
+}
+/*fnmember_payment_record*/
+.fnmember_payment_record .publicCustomTable::after{
+    display: none;
+}
+.fnmember_payment_record .info{
+    display: none;
+}
+.fnmember_payment_record .info.show{
+    display: block;
+}
