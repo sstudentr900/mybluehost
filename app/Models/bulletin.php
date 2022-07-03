@@ -1,9 +1,10 @@
 <?PHP
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Bulletin extends Model {
+    use HasFactory;
     //資料表名稱
     protected $table = 'bulletin';
 
