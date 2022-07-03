@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model {
+class news extends Model {
     //資料表名稱
     protected $table = 'news';
 
