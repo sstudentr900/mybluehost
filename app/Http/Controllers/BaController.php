@@ -10,10 +10,10 @@ use App\Models\Dues AS data_badues;
 use App\Models\Record AS data_barecord;
 use App\Models\Manager AS data_bamanager;
 use App\Models\Carousel AS data_bacarousel;
-use App\Models\Bulletin AS data_babulletin;
+use App\Models\bulletin AS data_babulletin;
 use App\Models\Meeting AS data_bameeting;
 use App\Models\Meeting_year AS data_bameeting_year;
-use App\Models\News AS data_banews;
+use App\Models\news AS data_banews;
 use App\Models\Introduction AS data_introduction;
 use App\Models\Appendix AS data_appendix;
 //驗證資料
