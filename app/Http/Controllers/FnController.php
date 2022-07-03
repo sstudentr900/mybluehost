@@ -5,7 +5,7 @@ use App\Http\Controllers\Controllers;
 //自訂DB
 use DB;
 use App\Models\Carousel AS data_bacarousel;
-use App\Models\Bulletin AS data_babulletin;
+use App\Models\bulletin AS data_babulletin;
 use App\Models\News AS data_banews;
 use App\Models\Member AS data_bamember;
 use App\Models\Record AS data_barecord;
