@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class bulletin extends Model
 {
     use HasFactory;
-    protected $table="bulletins";
+    protected $table="bulletin";
     protected $promaryKey='id';
     protected $fillable=[
         'sort',

@@ -50,7 +50,7 @@ class FnController extends Controller
         $bulletin = data_babulletin::where('release','y')->orderBy('sort','desc')->limit($end)->get();
         $newsInfo = Customfn::customSearch(data_banews::where('release','y')->count(),$end,1);
         $news = data_banews::where('release','y')->orderBy('sort','desc')->limit($end)->get();
-        if(count($carousel) || count($bulletin) || count($news)){
+        if(!count($carousel) || !count($bulletin) || !count($news)){
             abort(404);
         }
         $this->binding['datas_carousel'] =  $carousel;

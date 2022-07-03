@@ -13,7 +13,7 @@ class CreateBulletinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bulletins', function (Blueprint $table) {
+        Schema::create('bulletin', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('sort');
             $table->string('title',100);
@@ -31,6 +31,6 @@ class CreateBulletinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bulletins');
+        Schema::dropIfExists('bulletin');
     }
 }
