@@ -1,16 +1,17 @@
-<?php
-
+<?PHP
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class news extends Model
-{
-    use HasFactory;
-    protected $table="news";
-    protected $promaryKey='id';
-    protected $fillable=[
+class News extends Model {
+    //資料表名稱
+    protected $table = 'news';
+
+    //主鍵名稱
+    protected $promaryKey = 'id';
+
+    //可變動欄位
+    protected $fillable = [
         'sort',
         'title',
         'short',
@@ -18,3 +19,4 @@ class news extends Model
         'release',
     ];
 }
+?>
