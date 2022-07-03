@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controllers;
-use App\Models\ShareData;
 //自訂DB
 use DB;
 use App\Models\Member AS data_bamember;
@@ -31,7 +30,7 @@ use Illuminate\Support\Facades\Storage;
 class BaController extends Controller
 {
     public $binding = [
-        'title' => ShareData::TITLE,
+        'title' => '',
         'active' => '',
         'mainTitle' => '',
         'datas'=>  '',

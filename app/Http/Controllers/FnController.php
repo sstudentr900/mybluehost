@@ -8,7 +8,6 @@ use App\Models\Carousel AS data_bacarousel;
 use App\Models\Bulletin AS data_babulletin;
 use App\Models\News AS data_banews;
 use App\Models\Member AS data_bamember;
-use App\Models\ShareData;
 use App\Models\Record AS data_barecord;
 use App\Models\Dues AS data_badues;
 use App\Models\Manager AS data_bamanager;
@@ -40,7 +39,7 @@ use App\Test2;
 class FnController extends Controller
 {
     public $binding = [
-        'title' => ShareData::TITLE,
+        'title' => '',
     ];
     function __construct(){
         $this->pathFn();
