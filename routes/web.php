@@ -122,8 +122,8 @@ Route::get('/', function() {
     return redirect('fnhome');
 });
 //回首頁
-// Route::get('fnhome', [FnController::class,'fnhome'])->name('fnhome');
-Route::get('fnhome', action('FnController@fnhome'))->name('fnhome');
+Route::get('fnhome', [FnController::class,'fnhome'])->name('fnhome');
+// Route::get('fnhome', action('FnController@fnhome'))->name('fnhome');
 //首頁最新消息換頁
 Route::post('fnhome/new/{id}', [FnController::class,'fnhomeNew']);
 //首頁活動公告換頁
