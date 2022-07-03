@@ -51,7 +51,8 @@
                 <ul>
                     @foreach($datas_news as $data)
                     <li>
-                        <a href="{{ url::asset('fnnews').'/'.$data->id}}">{{ $data->title }}</a>
+                        <!-- <a href="{{ url::asset('fnnews').'/'.$data->id}}">{{ $data->title }}</a> -->
+                        <a href="{{ route('fnnews', ['id' => $data->id]) }}">{{ $data->title }}</a>
                         <p><span>{{ str_replace('-','/',explode(' ',$data->updated_at)[0]) }}</span></p>
                     </li>
                     @endforeach
@@ -88,7 +89,8 @@
                 <ul>
                     @foreach($datas_bulletin as $data)
                     <li>
-                        <a href="{{ url::asset('fnbulletin').'/'.$data->id}}">{{ $data->title }}</a>
+                        <!-- <a href="{{ url::asset('fnbulletin').'/'.$data->id}}">{{ $data->title }}</a> -->
+                        <a href="{{ route('fnbulletin', ['id' => $data->id]) }}">{{ $data->title }}</a>
                         <p><span>{{ str_replace('-','/',explode(' ',$data->updated_at)[0]) }}</span></p>
                     </li>
                     @endforeach
