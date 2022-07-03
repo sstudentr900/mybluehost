@@ -6,15 +6,15 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title')</title>
         <link rel="icon" href="favicon.ico">
-        <link href="{{ URL::asset('css/fnapp.css')}}" rel="stylesheet" type="text/css">
-        <script src="{{ URL::asset('js/jquery-3.3.1.min.js')}}"></script>
+        <link href="{{ secure_asset('css/fnapp.css')}}" rel="stylesheet" type="text/css">
+        <script src="{{ secure_asset('js/jquery-3.3.1.min.js')}}"></script>
         <script>
             var bulletinMessage = '';
             @if (session('status'))
                 bulletinMessage = '{{ session("status") }}'
             @endif
         </script>
-        <script src="{{ URL::asset('js/fnapp.js')}}"></script>
+        <script src="{{ secure_asset('js/fnapp.js')}}"></script>
     </head>
     <body>
         <div class="fn {{ $active }}">
