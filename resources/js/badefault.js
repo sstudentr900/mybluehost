@@ -547,7 +547,6 @@ window.selectFn = function(){
     //     spinner.classList.remove("opacity-1");
     // }
     // }
-      
 // }
 window.onload = function(){
     var getUrl = document.querySelector('.ba').className.split(' ')[1];
