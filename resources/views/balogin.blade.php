@@ -6,10 +6,10 @@
         <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
         <title>@yield('title')</title>
         <link rel="icon" href="favicon.ico">
-        <link href="{{ public_path('css/baapp.css')}}" rel="stylesheet" type="text/css">
-        <script src="{{ public_path('js/jquery-3.3.1.min.js')}}"></script>
+        <link href="{{ mix('css/baapp.css')}}" rel="stylesheet" type="text/css">
+        <script src="{{ mix('js/jquery-3.3.1.min.js')}}"></script>
         <!-- <script src="{{ public_path('js/tinymce/tinymce.min.js')}}"></script> -->
-        <script src="{{ public_path('js/baapp.js')}}"></script>
+        <script src="{{ mix('js/baapp.js')}}"></script>
     </head>
     <body>
         <div class="ba balogin">
