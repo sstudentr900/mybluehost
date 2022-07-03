@@ -1,16 +1,17 @@
-<?php
-
+<?PHP
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class bulletin extends Model
-{
-    use HasFactory;
-    protected $table="bulletin";
-    protected $promaryKey='id';
-    protected $fillable=[
+class Bulletin extends Model {
+    //資料表名稱
+    protected $table = 'bulletin';
+
+    //主鍵名稱
+    protected $promaryKey = 'id';
+
+    //可變動欄位
+    protected $fillable = [
         'sort',
         'title',
         'short',
@@ -18,3 +19,4 @@ class bulletin extends Model
         'release',
     ];
 }
+?>
