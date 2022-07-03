@@ -70,8 +70,8 @@ class FnController extends Controller
     public function fnhome(){
         $end = 5; //顯示數量
         $carousel = data_bacarousel::where('release','y')->orderBy('sort','desc')->get();
-        $bulletinInfo = Customfn::customSearch(data_babulletin::where('release','y')->count(),$end,1);
-        $bulletin = data_babulletin::where('release','y')->orderBy('sort','desc')->limit($end)->get();
+        // $bulletinInfo = Customfn::customSearch(data_babulletin::where('release','y')->count(),$end,1);
+        // $bulletin = data_babulletin::where('release','y')->orderBy('sort','desc')->limit($end)->get();
         $newsInfo = Customfn::customSearch(data_banews::where('release','y')->count(),$end,1);
         $news = data_banews::where('release','y')->orderBy('sort','desc')->limit($end)->get();
         if(!count($carousel) || !count($bulletin) || !count($news)){
