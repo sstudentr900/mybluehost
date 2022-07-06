@@ -549,34 +549,53 @@ window.selectFn = function(){
     // }
 // }
 window.onload = function(){
-    var getUrl = document.querySelector('.ba').className.split(' ')[1];
-    if(getUrl=="baintroduction" || 
-    getUrl=="baacademic" || 
-    getUrl=="bajournal" || 
-    getUrl=="balist" || 
-    getUrl=="bajoin" || 
-    getUrl=="banews_add" || 
-    getUrl=="banews_update" || 
-    getUrl=="babulletin_add" || 
-    getUrl=="babulletin_update"){
-        tinymceFn({'select': '#tinymce'})
-    }else if(getUrl=="bameeting_add" || 
-    getUrl=="bameeting_update" || 
-    getUrl=="bameeting_year_add" || 
-    getUrl=="bameeting_year_update" ){
-        fileUploader()
-        tinymceFn({'select': '#tinymce'})
-    }else if(getUrl=="bamanager_add" ||
-    getUrl=='bamanager_update' || 
-    getUrl=="bamember_add" ||
-    getUrl=='bamember_update'){
-        imgFn(300,300)
-    }else if( getUrl=="bacarousel_add" ||
-    getUrl=='bacarousel_update'){    
-        imgFn(1500,750)
-    }else if( getUrl=="barecord"){    
-        selectFn()
-    }
     menu()
-    loadRemove()
+    fileUploader()
+    selectFn()
+
+     //getUrl
+    var getUrl = document.querySelector('.ba').className.split(' ')[1];
+    if(~['bamanager_add','bamanager_update','bamember_add','bamember_update'].indexOf(getUrl)){       
+        imgFn(300,300)
+    }else if(~['bacarousel_add','bacarousel_update'].indexOf(getUrl)){    
+        imgFn(1500,750)
+    }
+
+    //tinymce
+    if(document.querySelector('#tinymce')){
+        tinymceFn({'select': '#tinymce'})
+    }else{
+        loadRemove()
+    }
+
+    // var getUrl = document.querySelector('.ba').className.split(' ')[1];
+    // if(getUrl=="baintroduction" || 
+    // getUrl=="baacademic" || 
+    // getUrl=="bajournal" || 
+    // getUrl=="balist" || 
+    // getUrl=="bajoin" || 
+    // getUrl=="banews_add" || 
+    // getUrl=="banews_update" || 
+    // getUrl=="babulletin_add" || 
+    // getUrl=="babulletin_update"){
+    //     tinymceFn({'select': '#tinymce'})
+    // }else if(getUrl=="bameeting_add" || 
+    // getUrl=="bameeting_update" || 
+    // getUrl=="bameeting_year_add" || 
+    // getUrl=="bameeting_year_update" ){
+    //     fileUploader()
+    //     tinymceFn({'select': '#tinymce'})
+    // }else if(getUrl=="bamanager_add" ||
+    // getUrl=='bamanager_update' || 
+    // getUrl=="bamember_add" ||
+    // getUrl=='bamember_update'){
+    //     imgFn(300,300)
+    // }else if( getUrl=="bacarousel_add" ||
+    // getUrl=='bacarousel_update'){    
+    //     imgFn(1500,750)
+    // }else if( getUrl=="barecord"){    
+    //     selectFn()
+    // }
+    // menu()
+    // loadRemove()
 }
