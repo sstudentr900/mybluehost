@@ -379,9 +379,9 @@ window.fnhomeFn = function () {
 window.onload = function () {
   var getUrl = document.querySelector('.fn').className.split(' ')[1];
 
-  if (getUrl == "fnhome") {
+  if (~["fnhome"].indexOf(getUrl)) {
     fnhomeFn();
-  } else if (getUrl == "fnregister" || getUrl == "fnmember_information") {
+  } else if (~["fnregister", "fnmember_information"].indexOf(getUrl)) {
     imgFn(300, 300);
   }
 

@@ -6,16 +6,16 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>@yield('title')</title>
         <link rel="icon" href="favicon.ico">
-        <link href="{{ URL::asset('css/baapp.css')}}" rel="stylesheet" type="text/css">
-        <script src="{{ URL::asset('js/jquery-3.3.1.min.js')}}"></script>
-        <script src="{{ URL::asset('js/tinymce/tinymce.min.js')}}"></script>
+        <link href="{{ asset('css/baapp.css')}}" rel="stylesheet" type="text/css">
+        <script src="{{ asset('js/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{ asset('js/tinymce/tinymce.min.js')}}"></script>
         <script>
             var bulletinMessage = '';
             @if (session('status'))
                 bulletinMessage = '{{ session("status") }}'
             @endif
         </script>
-        <script src="{{ URL::asset('js/baapp.js')}}"></script>
+        <script src="{{ asset('js/baapp.js')}}"></script>
     </head>
     <body>
         <div class="ba {{$active}}">

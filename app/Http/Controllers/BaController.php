@@ -1144,7 +1144,7 @@ class BaController extends Controller
     //basignout (上頁有問題)
     public function basignout(){
         //清除Session
-        session()->forget('user_id');
+        session()->forget('bauser_id');
         // Cache::flush();
         //重新導向回首頁
         return redirect('/balogin');
