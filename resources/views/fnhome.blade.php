@@ -43,10 +43,10 @@
             <div class="new">
                 <div class="title">
                     <h3>最新消息</h3>
-                    <div class="control">
+                    <!-- <div class="control">
                         <button class="{{ $newsInfo['pageStare']>1 ? 'active' : '' }}">上一頁</button>
                         <button class="{{ $newsInfo['pageStare']<$newsInfo['pageTotle'] ? 'active' : '' }}">下一頁</button>
-                    </div>
+                    </div> -->
                 </div>
                 <ul>
                     @foreach($datas_news as $data)
@@ -81,10 +81,10 @@
             <div class="bulletin">
                 <div class="title">
                     <h3>活動公告 </h3>
-                    <div class="control">
+                    <!-- <div class="control">
                         <button class="{{ $bulletinInfo['pageStare']>1 ? 'active' : '' }}">上一頁</button>
                         <button class="{{ $bulletinInfo['pageStare']<$bulletinInfo['pageTotle'] ? 'active' : '' }}">下一頁</button>
-                    </div>
+                    </div> -->
                 </div>
                 <ul>
                     @foreach($datas_bulletin as $data)

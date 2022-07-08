@@ -641,7 +641,7 @@ input:focus{
 }
 .publicMenu .menu b,
 .publicMenu .menu a{
-    font-size: 16px; 
+    font-size: 18px; 
     color: #777777;
     font-weight: 500;
     letter-spacing: 1px;
@@ -660,8 +660,8 @@ input:focus{
 .publicMenu .menu a.active,
 .publicMenu .menu>ul>li>b:hover,
 .publicMenu .menu>ul>li>a:hover{
-    color: #fff;
-    background-color: #437eaa;
+    color: #437eaa;
+    /* background-color: #437eaa; */
 }
 /* .publicMenu .menu b:hover svg,
 .publicMenu .menu a:hover svg,
@@ -674,7 +674,7 @@ input:focus{
     max-height: 0;
     overflow: hidden;
     transition: max-height .2s;
-    padding:  0 0 0 25px;
+    padding:  0 0 0 15px;
 }
 .publicMenu .menu ul li.active ul{
     max-height: 220px;
@@ -682,19 +682,22 @@ input:focus{
 }
 .publicMenu .menu ul li ul li a{
     /* padding: 10px 5px; */
-    padding: 2px 0;
+    padding: 0;
     font-size: 15px; 
     /* background: #333333; */
     background: #fff;
     color: #838383;
     border-bottom: none;
 }
+.publicMenu .menu ul li ul li a+a{
+    margin-top: 4px;
+}
 .publicMenu .menu ul li ul li:last-child{
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
-.publicMenu .menu ul li ul li:first-child{
+/* .publicMenu .menu ul li ul li:first-child{
     margin-top: 8px;
-}
+} */
 .publicMenu .menu ul li.active ul li.active a,
 .publicMenu .menu ul li.active ul li a:hover{
     /* background: #777; */
@@ -718,8 +721,14 @@ body {
 }
 
 /*public--------------------------------------------------------------------*/
-.publicMenu .contact{
-    margin-bottom: 20px;
+.publicSection{
+    background: url(../img/fnbg.jpg) no-repeat;
+    /* background-attachment: fixed; */
+    background-position: bottom right;
+}
+.publicMenu{
+    padding: 20px;
+    background: #fff;
 }
 .publicMenu .contact h3{
     font-size: 22px;
@@ -739,9 +748,19 @@ body {
     line-height: 21px;
     display: inline-block;
 }
+.publicMain{
+    /* max-width: 1800px; */
+    max-width: 1600px;
+    margin: auto;
+    background: none;
+    
+}
+.publicMain .logo{
+    display: none;
+}
 .publicMain .nav{
     display: flex;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     justify-content: end;
     align-items: center;
 }
@@ -761,6 +780,13 @@ body {
         overflow: hidden;
         transition: height .5s;
         top: 55px;
+        padding: 0 20px;
+    }
+    .publicMenu .nav .logo{
+        display: none;
+    }
+    .publicMain .logo{
+        display: block;
     }
     .publicSection.active .publicMenu{
         height: calc(100vh - 55px);
@@ -1022,8 +1048,11 @@ body {
 }
 .publicMenu .menu b,
 .publicMenu .menu a{
-    padding: 12px 8px;
-    text-align: left;
+    /* padding: 12px 8px;
+    text-align: left; */
+    font-size: 16px;
+    padding: 8px;
+    justify-content: center;
     display: flex;
     align-items: center;
 }
@@ -1055,12 +1084,12 @@ body {
 }
 .publicMenu .menu li.active b::after{
     transform: rotate(135deg);
-    border: 2px solid #fff;
+    border: 1px solid #437eaa;
     border-left: none;
     border-bottom: none;
 }
 .publicMenu .menu b:hover::after{
-    border: 2px solid #fff;
+    border: 1px solid #437eaa;
     border-left: none;
     border-bottom: none;
 }
@@ -1148,7 +1177,7 @@ body {
 }
 .fnhome .publicFlex{
     justify-content: space-between;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     flex-wrap: wrap;
     margin: 0 -15px;
 }
@@ -1223,7 +1252,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 .fnhome .advertise ul li{
@@ -1295,7 +1324,7 @@ body {
     /* font-family: 'Noto Serif TC', serif;
     font-weight: 200; */
 }
-.publicCustomTable::after{
+/* .publicCustomTable::after{
     content: '';
     background: url('../img/fnbg.png') no-repeat;
     bottom: 0;
@@ -1305,7 +1334,7 @@ body {
     position: absolute;
     z-index: 1;
     opacity: 0.15;
-}
+} */
 .publicCustomTable p{
     font-size: 16px;
     font-weight: 300;

@@ -372,15 +372,13 @@ window.fnhomeFn = function () {
   }
 
   changePage('new');
-  changePage('bulletin');
-  slideFn();
+  changePage('bulletin'); // slideFn();
 };
 
 window.onload = function () {
   var getUrl = document.querySelector('.fn').className.split(' ')[1];
 
-  if (~["fnhome"].indexOf(getUrl)) {
-    fnhomeFn();
+  if (~["fnhome"].indexOf(getUrl)) {// fnhomeFn()
   } else if (~["fnregister", "fnmember_information"].indexOf(getUrl)) {
     imgFn(300, 300);
   }

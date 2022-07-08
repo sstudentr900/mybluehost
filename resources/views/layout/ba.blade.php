@@ -38,7 +38,7 @@
             <div class="publicSection">
                 <div class="publicMenu">
                     <div class="logo">
-                        <img src="{{ URL::asset('img/balogo.png')}}" alt="">
+                        <img src="{{ asset('img/balogo.png')}}" alt="">
                     </div>
                     <div class="menu">
                         <ul>
@@ -47,46 +47,46 @@
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bamanager')}}">後台管員</a>
+                                <a href="{{ asset('bamanager')}}">後台管員</a>
                             </li>
                             <li
                             @if($active == "bacarousel" || $active == "bacarousel_add" || $active == "bacarousel_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bacarousel')}}">前台輪播</a>
+                                <a href="{{ asset('bacarousel')}}">前台輪播</a>
                             </li>
                             <li
                             @if($active == "banews" || $active == "banews_add" || $active == "banews_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('banews')}}">最新消息</a>
+                                <a href="{{ asset('banews')}}">最新消息</a>
                             </li>
                             <li
                             @if($active == "babulletin" || $active == "babulletin_add" || $active == "babulletin_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('babulletin')}}">活動公告</a>
+                                <a href="{{ asset('babulletin')}}">活動公告</a>
                             </li>
                             <li
                             @if($active == "baintroduction")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('baintroduction')}}">本會簡介</a>
+                                <a href="{{ asset('baintroduction')}}">本會簡介</a>
                             </li>
                             <li
                             @if($active == "baacademic")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('baacademic')}}">財務金融學刊</a>
+                                <a href="{{ asset('baacademic')}}">財務金融學刊</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="https://www.ipress.tw/J0206" target="_blank">財務金融學刊投稿</a>
-                            </li>
+                            </li> -->
                             <!-- <li
                                 @if($active == "bameeting" || $active == "bameeting_add" || $active == "bameeting_update" || $active == "bameeting_year" || $active == "bameeting_year_add" || $active == "bameeting_year_update")
                                     class="active"
@@ -99,14 +99,14 @@
                                         class="active"
                                     @endif
                                     >
-                                        <a href="{{ URL::asset('bameeting')}}">專題研討會</a>
+                                        <a href="{{ asset('bameeting')}}">專題研討會</a>
                                     </li>
                                     <li
                                     @if($active == "bameeting_year" || $active == "bameeting_year_add" || $active == "bameeting_year_update")
                                         class="active"
                                     @endif
                                     >
-                                        <a href="{{ URL::asset('bameeting_year')}}">年會</a>
+                                        <a href="{{ asset('bameeting_year')}}">年會</a>
                                     </li>
                                 </ul>
                             </li> -->
@@ -115,62 +115,62 @@
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bameeting')}}">專題研討會</a>
+                                <a href="{{ asset('bameeting')}}">專題研討會</a>
                             </li>
                             <li
                             @if($active == "bameeting_year" || $active == "bameeting_year_add" || $active == "bameeting_year_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bameeting_year')}}">年會研討會</a>
+                                <a href="{{ asset('bameeting_year')}}">年會研討會</a>
                             </li>
                             <li
                             @if($active == "bajournal")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bajournal')}}">金融研究雜誌</a>
+                                <a href="{{ asset('bajournal')}}">金融研究雜誌</a>
                             </li>
                             <li
                             @if($active == "balist")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('balist')}}">理監事名單</a>
+                                <a href="{{ asset('balist')}}">理監事名單</a>
                             </li>
                             <li
                             @if($active == "bajoin")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bajoin')}}">會員辦法</a>
+                                <a href="{{ asset('bajoin')}}">會員辦法</a>
                             </li>
                             <li
                             @if($active == "bamember" || $active == "bamember_add" || $active == "bamember_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('bamember')}}">會員個資</a>
+                                <a href="{{ asset('bamember')}}">會員個資</a>
                             </li>
                             <li
                             @if($active == "badues" || $active == "badues_add" || $active == "badues_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('badues')}}">繳費編輯</a>
+                                <a href="{{ asset('badues')}}">繳費編輯</a>
                             </li>
                             <li
                             @if($active == "barecord" || $active == "barecord_add" || $active == "barecord_update")
                                 class="active"
                             @endif
                             >
-                                <a href="{{ URL::asset('barecord/1')}}">繳費紀錄</a>
+                                <a href="{{ asset('barecord/1')}}">繳費紀錄</a>
                             </li>
                             <li>
-                                <a href="{{ URL::asset('basignout')}}">後台登出</a>
+                                <a href="{{ asset('basignout')}}">後台登出</a>
                             </li>
                             <li>
-                                <a href="{{ URL::asset('fnhome')}}">回到前台</a>
+                                <a href="{{ asset('fnhome')}}">回到前台</a>
                             </li>
                         </ul>
                     </div>
