@@ -487,12 +487,12 @@
                                         <P>回首頁</P>
                                     </a>
                                 </li> -->
-                                <li class="{{$active == 'fnintroduction'?'active':''}}">
+                                <li class="{{($active == 'fnintroduction')?'active':''}}">
                                     <a href="{{ route('fnintroduction')}}">
                                         <p>本會簡介</p>
                                     </a>
                                 </li>
-                                <li class="{{$active == 'fnacademic'?'active':''}}">
+                                <li class="{{($active == 'fnacademic')?'active':''}}">
                                     <a href="{{ route('fnacademic')}}">
                                         <p>財務金融學刊</p>
                                     </a>
@@ -521,45 +521,45 @@
                                 <li class="{{ $active == 'fnmeeting'?'active':'' }}">
                                     <a href="{{ route('fnmeeting')}}">專題研討會</a>
                                 </li> -->
-                                <li class="{{ $active == 'fnmeeting'?'active':'' || $active == 'fnmeeting_item' ?'active':''}}">
+                                <li class="{{ ($active == 'fnmeeting'?'active':'' || $active == 'fnmeeting_item') ?'active':'' }}">
                                     <a href="{{ route('fnmeeting')}}">專題研討會</a>
                                 </li>
-                                <li class="{{$active == 'fnjournal'?'active':''}}">
+                                <li class="{{ ($active == 'fnjournal') ?'active':'' }}">
                                     <a href="{{ route('fnjournal')}}">
                                         <p>金融研究雜誌</p>
                                     </a>
                                 </li>
-                                <li class="{{$active == 'fnlist'?'active':''}}">
+                                <li class="{{ ($active == 'fnlist') ?'active':'' }}">
                                     <a href="{{ route('fnlist')}}">
                                         <p>理監事名單</p>
                                     </a>
                                 </li>
-                                <li class="{{$active == 'fnjoin'?'active':''}}">
+                                <li class="{{ ($active == 'fnjoin') ?'active':'' }}">
                                     <a href="{{ route('fnjoin')}}">
                                         <p>會員辦法</p>
                                     </a>
                                 </li>
                                 @if(!session()->get('fnuser_id'))
-                                    <li class="{{$active == 'fnmember'?'active':''}}">
+                                    <li class="{{ ($active == 'fnmember') ?'active':''}}">
                                         <a href="{{ route('fnmember')}}">會員登入</a>
                                     </li>
-                                    <li class="{{$active == 'fnregister'?'active':''}}">
+                                    <li class="{{ ($active == 'fnregister') ?'active':''}}">
                                         <a href="{{ route('fnregister')}}">會員註冊</a>
                                     </li>
-                                    <li class="{{$active == 'fnpassword'?'active':''}}">
+                                    <li class="{{ ($active == 'fnpassword') ?'active':''}}">
                                         <a href="{{ route('fnpassword')}}">忘記密碼</a>
                                     </li>
                                 @else
-                                    <li class="{{$active == 'fnmember_information'?'active':''}}">
+                                    <li class="{{ ($active == 'fnmember_information') ?'active':''}}">
                                         <a href="{{ route('fnmember_information')}}">個人資料</a>
                                     </li>
-                                    <li class="{{$active == 'fnmember_password'?'active':''}}">
+                                    <li class="{{ ($active == 'fnmember_password') ?'active':''}}">
                                         <a href="{{ route('fnmember_password')}}">密碼修改</a>
                                     </li>
-                                    <li class="{{$active == 'fnmember_payment'?'active':''}}">
+                                    <li class="{{ ($active == 'fnmember_payment') ?'active':''}}">
                                         <a href="{{ route('fnmember_payment')}}">會員繳費</a>
                                     </li>
-                                    <li class="{{$active == 'fnmember_record'?'active':''}}">
+                                    <li class="{{ ($active == 'fnmember_record') ?'active':''}}">
                                         <a href="{{ route('fnmember_record')}}">繳費紀錄</a>
                                     </li>
                                     <li>
