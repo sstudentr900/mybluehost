@@ -770,8 +770,10 @@ class BaController extends Controller
     public function appendix_delet($id){
         $appendix =  data_appendix::where('id', $id)->first();
         // print_r($appendix['src']);
-        unlink(storage_path('app/'.$appendix['src'])); //delet store/app/fileName
-        data_appendix::find($id)->delete();  //delet data
+        if($appendix){
+            unlink(storage_path('app/'.$appendix['src'])); //delet store/app/fileName
+            data_appendix::find($id)->delete();  //delet data
+        }
     }
     //專題研討會 bameeting
     public function bameeting_search($p=1){

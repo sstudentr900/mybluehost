@@ -117,7 +117,7 @@ class FnController extends Controller
         return view('fnintroduction', $this->binding);
     }
     //fnmeeting
-    public function fnmeeting($p=1){
+    public function fnmeetingX($p=1){
         $end = 3; //顯示數量
         $datas2 = data_bameeting::orderBy('created_at', 'desc')->first();
         $datas2ID = $datas2->id;
@@ -127,12 +127,27 @@ class FnController extends Controller
             abort(404);
         }
          //get appendix
-         if(data_appendix::where('meeting_id', $datas2ID)->count()){
+        if(data_appendix::where('meeting_id', $datas2ID)->count()){
             $this->binding['appendixs'] = data_appendix::select('id','src','name')->where('meeting_id', $datas2ID)->orderBy('id','desc')->get();
         }
         $this->binding['title'] = '近期專題研討會';
         $this->binding['datas'] =  $datas;
         $this->binding['datas2'] =  $datas2;
+        return view('fnmeeting', $this->binding);
+    }
+    public function fnmeeting($p=1){
+        $end = 10; //顯示數量
+        $this->customSearch(data_bameeting::count(),$end,$p);
+        $datas = data_bameeting::offset( $this->binding['startValue'] )->limit( $this->binding['endValue'] )->orderBy('created_at','desc')->get();
+        if(!$datas){
+            abort(404);
+        }
+         //get appendix
+        if(data_appendix::count()){
+            $this->binding['appendixs'] = data_appendix::select('id','src','name')->orderBy('id','desc')->get();
+        }
+        $this->binding['title'] = '專題研討會';
+        $this->binding['datas'] =  $datas;
         return view('fnmeeting', $this->binding);
     }
     //fnmeeting_item
@@ -145,7 +160,6 @@ class FnController extends Controller
         if(data_appendix::where('meeting_id', $p)->count()){
             $this->binding['appendixs'] = data_appendix::select('id','src','name')->where('meeting_id', $p)->orderBy('id','desc')->get();
         }
-      
         $this->binding['datas'] =  $datas;
         return view('fnintroduction', $this->binding);
     }
@@ -226,17 +240,15 @@ class FnController extends Controller
         $this->binding['datas'] = $datas;
         return view('fnintroduction', $this->binding);
     }
-   
     //會員登入
     public function fnmember(Request $request){
         //清除Session
         session()->forget('fnuser_id');
-       if(session('fnuser_id')){
-            return redirect('fnmember_information');
-       }else{
-            return view('fnmember', $this->binding);
-       }
-      
+        if(session('fnuser_id')){
+                return redirect('fnmember_information');
+        }else{
+                return view('fnmember', $this->binding);
+        }
     }
     public function fnmember_post(){
         //清除Session
@@ -281,10 +293,10 @@ class FnController extends Controller
             return redirect('fnmember')->with('status', '帳號不能使用請聯絡客服，謝謝!!');
         }
 
-         //save
-         $data = data_bamember::find($user['id']);
-         $data->token = '';
-         $data->save();
+        //save
+        $data = data_bamember::find($user['id']);
+        $data->token = '';
+        $data->save();
 
         //session紀錄會員編號
         session(['fnuser_id' => $user->id]);
@@ -367,7 +379,6 @@ class FnController extends Controller
             $mail->subject('台灣財務金融學會【註冊通知】!!');
         });
 
-       
         // data save
         $data = new data_bamember;
         $data->cover =  Customfn::imgAdd($input['cover'],'bamember');
@@ -451,7 +462,6 @@ class FnController extends Controller
             $mail->to($user['account']);
             $mail->subject('台灣財務金融學會【修改密碼通知】!!');
         });
-       
 
         return redirect('fnmember')->with('status', '修改密碼通知已寄出請收信!!');
     }
@@ -650,13 +660,13 @@ class FnController extends Controller
         }
         // print_r($user['cover']);
 
-         //取得購買項目
-         $buyInfo = data_badues::where('id',$input['id'])->first();
-         if(!$buyInfo)
-         {
-            session()->forget('fnuser_id');
-            return redirect('fnmember')->with('status', '錯誤!!請重新操作或是聯絡客服!!');
-         }
+        //取得購買項目
+        $buyInfo = data_badues::where('id',$input['id'])->first();
+        if(!$buyInfo)
+        {
+        session()->forget('fnuser_id');
+        return redirect('fnmember')->with('status', '錯誤!!請重新操作或是聯絡客服!!');
+        }
 
         //訂單編號
         $merchant_no = str_random(3).substr(time(), 6,8).str_random(3);
@@ -671,7 +681,7 @@ class FnController extends Controller
         $data->state = 0;//當前狀態
         $data->save();
         $recordID = $data->id;
-      
+
         //金流
         $action = config('ecpay.Active'); //測試
         // $action = 'https://payment.ecpay.com.tw/Cashier/AioCheckOut/V5'; //正式
@@ -698,7 +708,6 @@ class FnController extends Controller
         ];
 
         echo $autoSubmitFormService->generate($input, $action);
-     
     }
     function ecpayCheckMacValue(array $params){
         $encType = 1;
@@ -827,7 +836,6 @@ class FnController extends Controller
 
             return '1|OK';
         }
-      
     }
     public function fnmember_payment_ok($id){
         $input = request()->all();

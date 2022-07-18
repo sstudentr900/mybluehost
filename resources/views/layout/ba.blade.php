@@ -117,13 +117,13 @@
                             >
                                 <a href="{{ asset('bameeting')}}">專題研討會</a>
                             </li>
-                            <li
+                            <!-- <li
                             @if($active == "bameeting_year" || $active == "bameeting_year_add" || $active == "bameeting_year_update")
                                 class="active"
                             @endif
                             >
                                 <a href="{{ asset('bameeting_year')}}">年會研討會</a>
-                            </li>
+                            </li> -->
                             <li
                             @if($active == "bajournal")
                                 class="active"

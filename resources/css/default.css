@@ -635,8 +635,12 @@ input:focus{
     top: 0;
     left: 0;
 }
+.publicMenu .nav .log a{
+    display: flex;
+    justify-content: center;
+} 
 .publicMenu .menu{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 60px;
 }
 .publicMenu .menu b,
@@ -652,7 +656,7 @@ input:focus{
 }
 
 .publicMenu .menu>ul>li{
-    border-bottom: 1px dashed #666;
+    border-bottom: 1px dashed #ccc;
 }
 
 .publicMenu .menu>ul>li.active>a,
