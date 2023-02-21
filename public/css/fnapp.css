@@ -1255,6 +1255,9 @@ body {
     flex: 0 0 370px;
     text-align: center;
 }
+.fnhome .publicFlex .fbbulletin img{
+  width: 100%;
+}
 .fnhome .advertise{
     padding: 20px 0 0;
 }
@@ -1360,7 +1363,7 @@ body {
     display: inline-block ;
 }
 .publicCustomTable p+p{
-    margin-top: 16px;
+    margin-top: 6px;
 }
 .publicCustomTable {
     margin: 15px 0 10px;
