@@ -5,9 +5,10 @@ body {
 
 /*public--------------------------------------------------------------------*/
 .publicSection{
-    background: url(../img/fnbg.jpg) no-repeat;
+    /* background: url(../img/fnbg.jpg) no-repeat;
     background-attachment: fixed;
-    background-position: bottom right;
+    background-position: bottom right; */
+    background: #2c2c2c;
 }
 .publicMenu{
     padding: 20px;
